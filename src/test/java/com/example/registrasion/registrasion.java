@@ -4,16 +4,18 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @RestController
+@CrossOrigin(origins = "*")
 public class registrasion {
 
-    @GetMapping("/data")
+    @GetMapping("/")
     public String getData() {
-        return " <h1> big text </h1>";
+        return " TEXT FROM BACKEND!";
     }
 
     public static void main(String[] args) {

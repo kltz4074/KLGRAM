@@ -1,6 +1,4 @@
 import { useState, useEffect } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
 import './App.css';
 
 function App() {
@@ -8,7 +6,7 @@ function App() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:8080/data")
+    fetch("http://localhost:8080/")
       .then(res => {
         if (!res.ok) {
           throw new Error('Network response was not ok');
@@ -22,7 +20,7 @@ function App() {
   return (
     <div>
       <h1>From backend:</h1>
-      hello bruh!
+      {error ? <p>Error: {error}</p> : <p>{data}</p>}
     </div>
   );
 }
