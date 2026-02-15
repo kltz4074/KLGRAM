@@ -1,32 +1,24 @@
-import { useState, useEffect } from 'react';
-import './App.css';
+import { Routes, Route, Link } from 'react-router-dom';
+import Home from './pages/Home.tsx';
+import Login from './pages/login.tsx';
+import Register from './pages/register.tsx';
+import "./App.css";
 
 function App() {
-  const [data, setData] = useState('');
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    fetch("http://localhost:8080/")
-      .then(res => {
-        if (!res.ok) throw new Error('Network response was not ok');
-        return res.text();
-      })
-      .then(text => setData(text))
-      .catch(err => setError(err.message));
-  }, []);
-
   return (
-    <div className="wrapper">
-      <div className="page">
-        <div className="title">KLGRAM</div>
-
-        <div className="container">
-          <input className="input" placeholder="Username" />
-          <input className="input" placeholder="Password" type="password" />
-          <button className="Button">Login</button>
-        </div>
+    <>
+      <div className="nav">
+        <Link className="Link" to="/">Home</Link>
+        <Link className="Link" to="/login">Login</Link>
+        <Link className="Link" to="/register">Register</Link>
       </div>
-    </div>
+      
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
+    </>
   );
 }
 
