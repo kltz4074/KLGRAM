@@ -20,7 +20,13 @@ function App() {
   return (
     <body>
       <div className="page">
-        <div className="glassText">login window</div>
+        <div className='title'>KLGRAM</div>
+
+        <div className='container'>
+          <input className='input' placeholder='Username' />
+          <input className='input' placeholder='Password' type='password' />
+          <button className='Button'>Login</button>
+        </div>
       </div>
     </body>
   );
