@@ -3,14 +3,12 @@ import './App.css';
 
 function App() {
   const [data, setData] = useState('');
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     fetch("http://localhost:8080/")
       .then(res => {
-        if (!res.ok) {
-          throw new Error('Network response was not ok');
-        }
+        if (!res.ok) throw new Error('Network response was not ok');
         return res.text();
       })
       .then(text => setData(text))
@@ -18,17 +16,17 @@ function App() {
   }, []);
 
   return (
-    <body>
+    <div className="wrapper">
       <div className="page">
-        <div className='title'>KLGRAM</div>
+        <div className="title">KLGRAM</div>
 
-        <div className='container'>
-          <input className='input' placeholder='Username' />
-          <input className='input' placeholder='Password' type='password' />
-          <button className='Button'>Login</button>
+        <div className="container">
+          <input className="input" placeholder="Username" />
+          <input className="input" placeholder="Password" type="password" />
+          <button className="Button">Login</button>
         </div>
       </div>
-    </body>
+    </div>
   );
 }
 

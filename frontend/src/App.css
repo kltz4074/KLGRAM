@@ -44,6 +44,7 @@ body {
 .input {
   width: 60%;
   height: 56px;
+  background-color: #242424b6;
   border: none;
   border-radius: 5px;
   border-color: #58585800;
@@ -51,16 +52,24 @@ body {
   padding: 0 10px;
 }
 
+input:focus {
+  outline: none;
+  border-color: #58585863;
+  box-shadow: 0 0 5px #b9b9b9ab;
+  transition: 0.2s;
+}
+
 .title {
   text-align: center;
 
   font-weight: bold;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 10vh;
+  font-size: 4em;
   color: #ffffff4d;
   backdrop-filter: blur(5px);
   text-shadow: 0 0 7px #ffffff80;
 }
+
 
 .Button {
   width: 40%;
@@ -74,10 +83,4 @@ body {
   font-weight: bold;
   cursor: pointer;
   transition: 0.5s;
-}
-
-.Button:hover {
-  background-color: #2424247c;
-  color: #ffffff;
-  border-color: #584568;
 }
