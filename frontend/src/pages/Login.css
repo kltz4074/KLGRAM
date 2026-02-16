@@ -50,6 +50,7 @@
 .title {
   font-size: 3rem;
   font-weight: bold;
+  text-align: center;
   color: rgba(255, 255, 255, 0.85);
   margin-bottom: 30px;
 
