@@ -1,7 +1,7 @@
 import { Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home.tsx';
-import Login from './pages/login.tsx';
-import Register from './pages/register.tsx';
+import Login from './pages/Login.tsx';
+import Register from './pages/Register.tsx';
 import "./App.css";
 
 function App() {
