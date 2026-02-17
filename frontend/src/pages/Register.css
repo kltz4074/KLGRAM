@@ -1,3 +1,9 @@
 .page {
   transition: height 0.3s ease;
 }
+
+.errorText {
+  color: red;
+  margin-top: 10px;
+  font-size: 14px;
+}

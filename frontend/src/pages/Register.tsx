@@ -1,20 +1,92 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import "./Register.css"
+import "./Register.css";
 
 function Register() {
-    return (
-      <>
-        <div className="title">KLGRAM</div>
-        <div className="container">
-          <input className="input" placeholder="Username" />
-          <input className="input" placeholder="Email" />
-          <input className="input" placeholder="Password" type="password" />
-          <input className="input" placeholder="confirm Password" type="password" />
-          
-          <button className="Button">Register</button>
-          <p className='miniText'>Already have an account? <Link to="/">Log in</Link></p>
-        </div>
-      </>
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+
+  const [error, setError] = useState("");
+
+  const handleRegister = () => {
+    setError("");
+
+    if (!username.trim()) {
+      setError("Enter Username");
+      return;
+    }
+
+    if (!email.trim()) {
+      setError("Enter Email");
+      return;
+    }
+
+    if (!password.trim()) {
+      setError("Enter Password");
+      return;
+    }
+
+    if (!confirmPassword.trim()) {
+      setError("Confirm Password");
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      setError("passwords do not match");
+      return;
+    }
+
+    console.log("Registration successful");
+  };
+
+  return (
+    <>
+      <div className="title">KLGRAM</div>
+
+      <div className="container">
+        <input
+          className="input"
+          placeholder="Username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
+
+        <input
+          className="input"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+
+        <input
+          className="input"
+          placeholder="Password"
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+
+        <input
+          className="input"
+          placeholder="Confirm Password"
+          type="password"
+          value={confirmPassword}
+          onChange={(e) => setConfirmPassword(e.target.value)}
+        />
+
+        <button className="Button" onClick={handleRegister}>
+          Register
+        </button>
+
+        {error && <p className="errorText">{error}</p>}
+
+        <p className="miniText">
+          Already have an account? <Link to="/">Log in</Link>
+        </p>
+      </div>
+    </>
   );
 }
 

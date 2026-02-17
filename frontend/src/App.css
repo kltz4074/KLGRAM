@@ -194,38 +194,25 @@ body {
 
 
 
-
-
 .page-wrapper {
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-
-  transition: all 0.25s ease;
 }
 
 .page {
+  overflow: hidden;
+
   width: clamp(320px, 40vw, 500px);
-  min-width: 480px;
-  min-height: 400px;
-  
-  margin: auto;
-  margin-top: calc(30vh - 80px);
   padding: 40px;
-  
   border-radius: 30px;
 
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px);
-
   border: 1px solid rgba(255, 255, 255, 0.1);
 
   box-shadow:
     0 10px 40px rgba(0, 0, 0, 0.4),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
-
-  
-  transition: all 0.25s ease;
 }
