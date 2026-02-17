@@ -83,8 +83,9 @@ function Register() {
         {error && <p className="errorText">{error}</p>}
 
         <p className="miniText">
-          Already have an account? <Link to="/">Log in</Link>
+          Already have an account? <Link to="/" className="link">Log in</Link>
         </p>
+        <div className='miniText'>.</div>
       </div>
     </>
   );

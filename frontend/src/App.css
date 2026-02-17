@@ -187,12 +187,21 @@ body {
 
 /* Small text */
 .miniText {
-  margin-top: 20px;
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.5);
+  margin-top: 15px;
 }
 
+link {
+  text-decoration: none;
+  color: rgb(185, 185, 185);
+  transition: 0.05s ease;
+}
 
+.link:hover {
+  transition: 1s ease;
+  color: white;
+}
 
 .page-wrapper {
   min-height: 100vh;
@@ -204,7 +213,7 @@ body {
 .page {
   overflow: hidden;
 
-  width: clamp(320px, 40vw, 500px);
+  width: clamp(360px, 45vw, 620px);
   padding: 40px;
   border-radius: 30px;
 
@@ -216,3 +225,4 @@ body {
     0 10px 40px rgba(0, 0, 0, 0.4),
     inset 0 0 30px rgba(255, 255, 255, 0.05);
 }
+
