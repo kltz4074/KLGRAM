@@ -1,6 +1,7 @@
 import { Routes, Route, Link } from "react-router-dom";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import PageWrapper from "./components/PageWrapper";
 import "./App.css";
 
 function App() {
@@ -21,10 +22,12 @@ function App() {
           <Link className="Link" to="/register">Register</Link>
         </nav>
 
-        <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-        </Routes>
+        <PageWrapper className="page">
+          <Routes>
+            <Route path="/" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+          </Routes>
+        </PageWrapper>
 
       </div>
     </div>
