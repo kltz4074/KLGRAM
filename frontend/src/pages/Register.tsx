@@ -79,13 +79,12 @@ function Register() {
         <button className="Button" onClick={handleRegister}>
           Register
         </button>
-
         {error && <p className="errorText">{error}</p>}
 
         <p className="miniText">
           Already have an account? <Link to="/" className="link">Log in</Link>
         </p>
-        <div className='miniText'>.</div>
+        <div className='miniText invisible'></div>
       </div>
     </>
   );

@@ -226,3 +226,7 @@ link {
     inset 0 0 30px rgba(255, 255, 255, 0.05);
 }
 
+.invisible {
+  visibility: hidden;
+  height: 20px;
+}
