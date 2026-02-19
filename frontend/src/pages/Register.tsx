@@ -10,7 +10,7 @@ function Register() {
 
   const [error, setError] = useState("");
 
-  const handleRegister = () => {
+  const handleRegister = async () => {
     setError("");
 
     if (!username.trim()) {
@@ -39,6 +39,24 @@ function Register() {
     }
 
     console.log("Registration successful");
+
+    try {
+      const response = await fetch("http://localhost:8080/api/auth/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          username,
+          password,
+          email
+        })
+      });
+      const data = await response.text();
+      console.log(data);
+    } catch (error) {
+      console.error("Error during registration:", error);
+    }
   };
 
   return (
