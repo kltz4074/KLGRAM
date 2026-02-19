@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>💬 KLGRAM</h1>
+  <h1>KLGRAM</h1>
   <p><i>Mini messenger application built for learning and portfolio</i></p>
   
   <!-- Badges -->
@@ -14,20 +14,20 @@
 
 ---
 
-## 📱 About The Project
+## About The Project
 
 **KLGRAM** is a full-stack messenger application developed as a learning project and portfolio piece. The goal is to create a functional messaging platform while mastering modern web development technologies and best practices.
 
-### ✨ Key Features
-- 🔐 User authentication system
-- 💬 Real-time messaging (planned)
-- 👤 User profiles
-- 📸 Media sharing (planned)
-- 🎨 Clean and intuitive UI
+### Key Features
+-  User authentication system
+-  Real-time messaging (planned)
+-  User profiles
+-  Media sharing (planned)
+-  Clean and intuitive UI
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 ### Backend
 <div>
@@ -45,37 +45,37 @@
 
 ---
 
-## 🎯 Project Goals
+## Project Goals
 
 This project was created with the following objectives:
 
-- 🚀 **Master full-stack development** - Understanding how frontend and backend communicate
-- 💡 **Practice modern technologies** - Working with React, Spring Boot, and databases
-- 📚 **Learn database management** - Implementing MySQL for data persistence
-- 🏗️ **Build scalable architecture** - Following best practices and design patterns
+- **Master full-stack development** - Understanding how frontend and backend communicate
+- **Practice modern technologies** - Working with React, Spring Boot, and databases
+- **Learn database management** - Implementing MySQL for data persistence
+- **Build scalable architecture** - Following best practices and design patterns
 
 ---
 
-## 📊 Development Status
+## Development Status
 
-### ✅ Completed
+### Completed
 - User registration page UI
 - Login page implementation
 - Basic project structure
 
-### 🚧 In Progress
+### In Progress
 - Backend API development
 - MySQL database setup
 - Authentication system
 
-### ❌ Planned
+### Planned
 - Real-time messaging
 - Media sharing functionality
 - User search and etc..
 
 ---
 
-## 👨‍💻 Author
+## Author
 ## KLGRAM is developed as a learning project. Feel free to reach out!
 
 
