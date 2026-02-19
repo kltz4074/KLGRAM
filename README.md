@@ -23,7 +23,7 @@
 -  Real-time messaging (planned)
 -  User profiles
 -  Media sharing (planned)
--  Clean and intuitive UI
+-  very beatful, modern and intuitive UI
 
 ---
 
