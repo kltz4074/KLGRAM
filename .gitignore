@@ -1,37 +1,68 @@
-HELP.md
-.gradle
-build/
-!gradle/wrapper/gradle-wrapper.jar
-!**/src/main/**/build/
-!**/src/test/**/build/
+# OS
+.DS_Store
+Thumbs.db
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
+# Logs
+*.log
 
-### IntelliJ IDEA ###
-.idea
-*.iws
+# Env files
+.env
+.env.*
+!.env.example
+
+# =========================
+# BACKEND (Spring / Java)
+# =========================
+
+# Build directories
+/backend/build/
+/backend/target/
+/backend/out/
+
+# Gradle
+/backend/.gradle/
+.gradle/
+
+# Maven
+/backend/.mvn/
+
+# IntelliJ
+/backend/.idea/
 *.iml
-*.ipr
-out/
-!**/src/main/**/out/
-!**/src/test/**/out/
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-
-### VS Code ###
+# VSCode
 .vscode/
+
+# Java compiled files
+*.class
+
+# Spring Boot
+*.jar
+*.war
+
+# =========================
+# FRONTEND (React / npm)
+# =========================
+
+# Node modules
+/frontend/node_modules/
+
+# Build output
+/frontend/dist/
+/frontend/build/
+
+# npm / yarn
+/frontend/npm-debug.log*
+/frontend/yarn-debug.log*
+/frontend/yarn-error.log*
+/frontend/pnpm-debug.log*
+
+# Vite cache
+/frontend/.vite/
+
+# =========================
+# Misc
+# =========================
+
+coverage/
+.idea/
