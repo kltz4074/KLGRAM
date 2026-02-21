@@ -1,68 +1,94 @@
+# ==================================================
 # OS
+# ==================================================
 .DS_Store
 Thumbs.db
 
-# Logs
-*.log
-
-# Env files
+# ==================================================
+# ENV
+# ==================================================
 .env
 .env.*
 !.env.example
 
-# =========================
-# BACKEND (Spring / Java)
-# =========================
+# ==================================================
+# LOGS
+# ==================================================
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
-# Build directories
+# ==================================================
+# BACKEND — Spring Boot (Gradle)
+# ==================================================
+
+# Build output
 /backend/build/
-/backend/target/
 /backend/out/
+/backend/target/
 
 # Gradle
 /backend/.gradle/
 .gradle/
 
-# Maven
-/backend/.mvn/
+# Keep gradle wrapper jar
+!backend/gradle/wrapper/gradle-wrapper.jar
 
-# IntelliJ
-/backend/.idea/
-*.iml
-
-# VSCode
-.vscode/
-
-# Java compiled files
+# Compiled files
 *.class
 
-# Spring Boot
+# Packaged artifacts
 *.jar
 *.war
 
-# =========================
-# FRONTEND (React / npm)
-# =========================
+# IntelliJ (backend)
+backend/.idea/
+backend/*.iml
 
-# Node modules
+# STS
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/nbdist/
+/nb-gradle/
+
+# ==================================================
+# FRONTEND — React / Vite
+# ==================================================
+
+# Dependencies
 /frontend/node_modules/
 
-# Build output
+# Production build
 /frontend/dist/
 /frontend/build/
-
-# npm / yarn
-/frontend/npm-debug.log*
-/frontend/yarn-debug.log*
-/frontend/yarn-error.log*
-/frontend/pnpm-debug.log*
 
 # Vite cache
 /frontend/.vite/
 
-# =========================
-# Misc
-# =========================
+# ==================================================
+# IDE (global)
+# ==================================================
+
+.idea/
+*.iws
+*.ipr
+*.iml
+.vscode/
+
+# ==================================================
+# TEST / COVERAGE
+# ==================================================
 
 coverage/
-.idea/
