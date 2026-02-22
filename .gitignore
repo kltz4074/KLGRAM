@@ -63,6 +63,9 @@ bin/
 /nbdist/
 /nb-gradle/
 
+# secrets
+Backend/src/main/resources/application-local.properties
+
 # ==================================================
 # FRONTEND — React / Vite
 # ==================================================
