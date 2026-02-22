@@ -62,10 +62,9 @@ This project was created with the following objectives:
 - User registration page UI
 - Login page implementation
 - Basic project structure
-
+- MySQL database setup
 ### In Progress
 - Backend API development
-- MySQL database setup
 - Authentication system
 
 ### Planned
