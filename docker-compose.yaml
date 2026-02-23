@@ -1,0 +1,54 @@
+version: "3.9"
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "5173:5173"
+    networks:
+      - backend-network
+
+  backend:
+    build:
+      context: ./Backend
+      dockerfile: Dockerfile
+    container_name: KLGRAM-backend
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/klgram
+      SPRING_DATASOURCE_USERNAME: kluser
+      SPRING_DATASOURCE_PASSWORD: klpass
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - backend-network
+
+  mysql:
+    image: mysql:8.3
+    container_name: KLGRAM-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: klgram
+      MYSQL_USER: kluser
+      MYSQL_PASSWORD: klpass
+      MYSQL_ROOT_PASSWORD: rootpass
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - backend-network
+
+networks:
+  backend-network:
+
+volumes:
+  mysql_data:
